@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Lover</title>
+    
+    <!-- Bootstrap 3.4.1 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery (Required for Bootstrap 3 JS) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap 3.4.1 JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin-top: 100px;
+        }
+
+        .navbar {
+            background-color: #e6a2d1af;
+            margin-bottom: 0;
+        }
+
+        .navbar-header .navbar-brand {
+            font-weight: bold;
+            color: rgb(42, 42, 202);
+        }
+
+        .navbar-nav > li > a {
+            font-size: 15px;
+            font-weight: bold;
+            color: rgb(23, 23, 33);
+        }
+
+        .navbar-nav .navbar-right > li > a {
+            font-size: 15px;
+            font-weight: bold;
+            color: rgb(149, 149, 167);
+        }
+
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .btn-buy, .btn-cart {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-buy {
+            background-color: #1e5a13;
+        }
+
+        .btn-cart {
+            background-color: #0c5ca2;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .container {
+            background-color: #e568c2af;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar navbar-fixed-top w-100 bg-success" style="background-color: #e568c2af; height: 100px;">
+    <nav class="navbar navbar-default" style="background-color: #e6a2d1af; height: 100px; width: 100%;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img src="/asset/LoGo.png" alt="logo" width="50" height="50" style="display:inline-block; vertical-align:middle;">
+                    <span class="h3" style="font-weight: bold; color:rgb(42, 42, 202);">Pets Lover</span>
+                    <p class="text-muted" style="font-size: 12px; color:rgb(42, 42, 202);">A pet’s favorite place</p>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav" style="margin-left: 100px; font-size: 15px; font-weight: bold; color:rgb(23, 23, 33); margin-top: 10px;">
+          
+                    <li><a href="/Html/PetGiver.html">Pet Giver</a></li>
+                    <li><a href="/Html/Rehome.html">Rehome a pet</a></li>
+                    <li><a href="#" class="active">Pet Product</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right" style="margin-right: 10px; font-size: 15px; font-weight: bold; color:rgb(149, 149, 167); margin-top: 10px;">
+                    <li><a href="/Html/Signup.html"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-dasharray="28" stroke-dashoffset="28" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4 21v-1c0 -3.31 2.69 -6 6 -6h4c3.31 0 6 2.69 6 6v1"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="28;0"/></path><path d="M12 11c-2.21 0 -4 -1.79 -4 -4c0 -2.21 1.79 -4 4 -4c2.21 0 4 1.79 4 4c0 2.21 -1.79 4 -4 4Z"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.4s" values="28;0"/></path></g></svg></a></li>
+                    <li><a id="cart_list1" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><path fill="currentColor" d="M160 96.039v32h304v63.345l-35.5 112.655H149.932L109.932 16H16v32h66.068l40 288.039h329.9L496 196.306V96.039zm16.984 272.305a64.073 64.073 0 0 0-64 64a64 64 0 0 0 128 0a64.07 64.07 0 0 0-64-64m0 96a32 32 0 1 1 32-32a32.04 32.04 0 0 1-32 32m224-96a64.073 64.073 0 0 0-64 64a64 64 0 0 0 128 0a64.07 64.07 0 0 0-64-64m0 96a32 32 0 1 1 32-32a32.04 32.04 0 0 1-32 32"/></svg></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="cart_detail"  style=" position: absolute; background-color: white; overflow: hidden;  transition:all; transition-duration: 500ms; right: 0; width: 0; height:100vh;" class="">
+            <h1> My cart </h1>
+            <div style="display: flex; flex-direction: column; height: auto;" id="cart_todo" class="container ">
+                
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<main class="container" style="background-color: #e568c2af; width: 100%; height:auto;">
+    <section id="petPro" class="row" style="margin-top: 15rem;">
+    </section>
+</main>
+
+<script type="module">
+    const data_list = [];
+    let cart = [];
+    const Petdes = document.getElementById('petPro');
+    const cart_list = document.getElementById('cart_list1');
+
+
+    let ProductCategory = [
+        { Id: "1", Name: "Bowl Plastic", Price: "4", Image: "https://i.pinimg.com/474x/5c/94/02/5c9402f0cd83fc2237985e7414cbb240.jpg" },
+        { Id: "2", Name: "Dog Toy", Price: "6", Image: "https://i.pinimg.com/474x/c9/26/d7/c926d7091b9d22da3c86ff8d5f5b2fc6.jpg" },
+        { Id: "3", Name: "Cat Bed", Price: "15", Image: "https://i.pinimg.com/474x/a4/df/06/a4df060e5a0b645d786ec2b0f07beed3.jpg" },
+        { Id: "4", Name: "Hamster Cage", Price: "30", Image: "https://i.pinimg.com/474x/50/c8/60/50c860a4140037bd77a92fa994570317.jpg" },
+        { Id: "5", Name: "Bird Food", Price: "10", Image: "https://i.pinimg.com/474x/b5/50/dc/b550dcd92feeb0dc837098658a978d28.jpg" },
+        { Id: "6", Name: "Dog Leash", Price: "12", Image: "https://i.pinimg.com/474x/5e/aa/63/5eaa63eed85c4df972d0d030129fc04c.jpg" },
+        { Id: "7", Name: "Cat Food", Price: "20", Image: "https://i.pinimg.com/474x/73/90/9d/73909d81ba07ce45072c8edd58e53f3b.jpg" }
+    ];
+
+    ProductCategory.forEach(product => {
+        Petdes.innerHTML += `
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <img src="${product.Image}" alt="${product.Name}">
+                    <div class="card-body">
+                        <h5 class="card-title">${product.Name}</h5>
+                        <p class="card-text" style="font-weight: bold; font-size: 2rem; color: #0c5ca2;">$${product.Price}</p>
+                        <div class="d-flex justify-content-around" style="margin-bottom:15px">
+                            <button class="btn btn-buy">Buy Now</button>
+                            <button data-id="${product.Id}" class="btn btn-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+    });
+
+
+    Petdes.addEventListener('click', (e) => {
+        let positionClick = e.target;
+        if(positionClick.classList.contains('btn-cart')) {
+            let position_id = positionClick.parentElement.parentElement.parentElement;
+            addToCart(position_id.querySelector('.btn-cart').dataset.id);
+        }
+    });
+
+    
+
+    function addToCart(id) {
+        let itemIndex = cart.findIndex(e => e.product_id == id);
+        let product = ProductCategory.find(e => e.Id == id);
+        
+        if (itemIndex < 0) {
+            cart.push({ name: product.Name, product_id: id, quantity: 1, price: product.Price, Image: product.Image });
+        } else {
+            cart[itemIndex].quantity += 1;
+            cart[itemIndex].price = parseInt(product.Price) * cart[itemIndex].quantity;
+        }
+        updateCartDisplay();
+    }
+
+    cart_list.onclick = () => {
+        cart_detail.style.width = cart_detail.style.width === '0px' ? '500px' : '0px';
+        cart_detail.style.opacity === '0' ? '1' : '0';
+        updateCartDisplay();
+    }
+    function updateCartDisplay(){
+        cart_todo.innerHTML = "";
+        cart.forEach(e => {
+            cart_todo.innerHTML += `<div  id="cart_list"  style=" display: flex; align-items: center; box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); width: 100%; height: 100px;" class="row">
+                    <div style="width: 80px; height: 80px;  display: flex;"  class="" >
+                        <img style="width: 100%; height: 100%; " src="${e.Image}" alt="">
+                        <div style="width: 500px; margin-left: 20px;  height: auto;">
+                            <p style="width: 200px; font-size: medium; ">${e.name}</p>
+                            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px; " class="px-2">
+                                <img id="decrement" style="width: 25px; height: 25px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGVJREFUWEdjZBhgwDjA9jOMOmA0BEZDYDQERkNgNASwhYA+AwODGo0qqVsMDAwXkc1GdwCI/49GlsOMRbGT3g54x8DAIIwvBEByAxoFNA59TONHs+FoCIyGwGgIjIbAaAgMeAgAAOzYByEZKHUbAAAAAElFTkSuQmCC" alt="">
+                                <p>${e.quantity}</p>
+                                <img data-id="${e.name}" id="increment" style="width: 25px; height: 25px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAKFJREFUWEftltEJgDAQQ+MmOom6iU6mo+gkuolyUKE/10DvoyDprz2SvjbBDo1X11gfMiACUQJ9esR37WOOGniS8AzgqDERMbAA2JLoCmCXARH4JQHL+eScbARgSbBlCTidfRZPtydYDL+c19DNZ9yeKBmw019R5TQ/eBQYgeZXUAKgJhQBEch7ws056xHWA2y++S8ZM0i/RwlQAbZBBkTgBbveKiFEnus4AAAAAElFTkSuQmCC" alt="">
+                            </div>
+
+                        </div>
+                        <p style="margin-top: 30px; margin-left: 100px;">$${e.price}</p>
+                    </div>
+                </div>`;
+        })
+    }
+    cart_todo.addEventListener('click', (e) => {
+        if (e.target.id === 'increment') { 
+            let item = cart.find(el => el.product_id == e.target.dataset.id);
+            item.quantity += 1;
+            item.price = parseFloat(ProductCategory.find(p => p.Id == item.product_id).Price) * item.quantity;
+        }
+        
+        
+        updateCartDisplay();
+    });
+    
+    
+</script>
+
+</body>
+</html>
